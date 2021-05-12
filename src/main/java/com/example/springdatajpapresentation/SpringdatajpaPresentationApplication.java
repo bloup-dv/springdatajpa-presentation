@@ -13,7 +13,7 @@ public class SpringdatajpaPresentationApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringdatajpaPresentationApplication.class, args);
 	}
-
+	/*
 	@Bean
 	public CommandLineRunner demo(StudentRepository studentRepository){
 		return (args) -> {
@@ -25,6 +25,8 @@ public class SpringdatajpaPresentationApplication {
 			for(Student student : studentRepository.findAll()){
 				System.out.println(student.toString());
 			}
+			while(true) {}
 		};
-	}
+
+	}*/
 }
