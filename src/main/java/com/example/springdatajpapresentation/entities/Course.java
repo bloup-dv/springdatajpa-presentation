@@ -1,21 +1,24 @@
 package com.example.springdatajpapresentation.entities;
 
+import org.springframework.lang.NonNull;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
+@Table(name = "course")
 public class Course {
     @Id
+    @NonNull
+    @Column(name = "COURSE_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String title;
 
-    @OneToMany
-    private List<Student> participants;
-
-    public Course(String title, List<Student> participants) {
+    public Course(String title){
         this.title = title;
-        this.participants = participants;
     }
 
     public Course() {}
@@ -28,12 +31,8 @@ public class Course {
         return title;
     }
 
-    public List<Student> getParticipants() {
-        return participants;
-    }
-
     @Override
     public String toString(){
-        return "Course "+ this.title + " id: "+this.id + " participants: "+ participants;
+        return "Course "+ this.title + " id: "+this.id;
     }
 }

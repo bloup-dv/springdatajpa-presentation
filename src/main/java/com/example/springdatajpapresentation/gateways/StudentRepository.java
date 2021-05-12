@@ -1,4 +1,4 @@
-package com.example.springdatajpapresentation.repositories;
+package com.example.springdatajpapresentation.gateways;
 
 import com.example.springdatajpapresentation.entities.Student;
 import org.springframework.data.repository.CrudRepository;

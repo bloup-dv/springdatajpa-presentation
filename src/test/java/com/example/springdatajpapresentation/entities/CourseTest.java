@@ -17,12 +17,12 @@ class CourseTest {
     void setUp() {
         Student student1 = new Student("Max", "Mustermann");
         Student student2 = new Student("Erika", "Mustermann");
-        this.testCourse = new Course("testCourse", List.of(student1,student2));
+        this.testCourse = new Course("testCourse");
     }
 
     @Test
     void testToString() {
-        String result = "Course "+ this.testCourse.getTitle()+" id: "+ this.testCourse.getId() + " participants: " + testCourse.getParticipants();
+        String result = "Course "+ this.testCourse.getTitle()+" id: "+ this.testCourse.getId();
         assertEquals(result, this.testCourse.toString());
     }
 }
